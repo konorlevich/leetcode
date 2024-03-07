@@ -11,3 +11,4 @@ Leetcode solutions
 - [remove element](./src/remove_element/remove_element.go) - [description](https://leetcode.com/problems/remove-element)
 - [find the index of the first occurrence in a string](./src/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.go) - [description](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string)
 - [search insert position](./src/search_insert_position/search_insert_position.go) - [description](https://leetcode.com/problems/search-insert-position)
+- [length of last word](./src/length_of_last_word/length_of_last_word.go) - [description](https://leetcode.com/problems/length-of-last-word)
