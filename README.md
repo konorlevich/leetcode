@@ -13,3 +13,4 @@ Leetcode solutions
 - [search insert position](./src/search_insert_position/search_insert_position.go) - [description](https://leetcode.com/problems/search-insert-position)
 - [length of last word](./src/length_of_last_word/length_of_last_word.go) - [description](https://leetcode.com/problems/length-of-last-word)
 - [plus one](./src/plus_one/plus_one.go) - [description](https://leetcode.com/problems/plus-one)
+- [add binary](./src/add_binary/add_binary.go) - [description](https://leetcode.com/problems/add-binary)
