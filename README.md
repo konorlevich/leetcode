@@ -15,3 +15,4 @@ Leetcode solutions
 - [plus one](./src/plus_one/plus_one.go) - [description](https://leetcode.com/problems/plus-one)
 - [add binary](./src/add_binary/add_binary.go) - [description](https://leetcode.com/problems/add-binary)
 - [square root](./src/square_root/square_root.go) - [description](https://leetcode.com/problems/sqrtx)
+- [climbing stairs](./src/climbing_stairs/climbing_stairs.go) - [description](https://leetcode.com/problems/climbing-stairs)
