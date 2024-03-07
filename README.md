@@ -14,3 +14,4 @@ Leetcode solutions
 - [length of last word](./src/length_of_last_word/length_of_last_word.go) - [description](https://leetcode.com/problems/length-of-last-word)
 - [plus one](./src/plus_one/plus_one.go) - [description](https://leetcode.com/problems/plus-one)
 - [add binary](./src/add_binary/add_binary.go) - [description](https://leetcode.com/problems/add-binary)
+- [square root](./src/square_root/square_root.go) - [description](https://leetcode.com/problems/sqrtx)
