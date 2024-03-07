@@ -10,3 +10,4 @@ Leetcode solutions
 - [remove duplicates from sorted array](./src/remove_duplicates_from_sorted_array/remove_duplicates_from_sorted_array.go) - [description](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
 - [remove element](./src/remove_element/remove_element.go) - [description](https://leetcode.com/problems/remove-element)
 - [find the index of the first occurrence in a string](./src/find_the_index_of_the_first_occurrence_in_a_string/find_the_index_of_the_first_occurrence_in_a_string.go) - [description](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string)
+- [search insert position](./src/search_insert_position/search_insert_position.go) - [description](https://leetcode.com/problems/search-insert-position)
