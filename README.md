@@ -8,3 +8,4 @@ Leetcode solutions
 - [valid parentheses](./src/valid_parentheses/valid_parentheses.go) - [description](https://leetcode.com/problems/valid-parentheses)
 - [merge two sorted lists](./src/merge_two_sorted_lists/merge_two_sorted_lists.go) - [description](https://leetcode.com/problems/merge-two-sorted-lists)
 - [remove duplicates from sorted array](./src/remove_duplicates_from_sorted_array/remove_duplicates_from_sorted_array.go) - [description](https://leetcode.com/problems/remove-duplicates-from-sorted-array)
+- [remove element](./src/remove_element/remove_element.go) - [description](https://leetcode.com/problems/remove-element)
