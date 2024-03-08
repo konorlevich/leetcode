@@ -2,6 +2,10 @@ package remove_duplicates_from_sorted_list
 
 import "github.com/konorlevich/leetcode/src/common"
 
+// deleteDuplicates
+//
+// Given the head of a sorted linked list, delete all duplicates such that each element appears only once.
+// Return the linked list sorted as well.
 func deleteDuplicates(f func(head *common.ListNode) *common.ListNode, head *common.ListNode) *common.ListNode {
 	return f(head)
 }

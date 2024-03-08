@@ -2,10 +2,17 @@ package palindrome
 
 import "fmt"
 
+// isPalindrome
+//
+// Given an integer x, return true if x is a palindrome, and false otherwise.
 func isPalindrome(f func(x int) bool, x int) bool {
 	return f(x)
 }
 
+// asString
+//
+// Treats the number as a string,
+// compares its left part to reversed right part
 func asString(x int) bool {
 	if x == 0 {
 		return true
@@ -28,6 +35,9 @@ func asString(x int) bool {
 	return str1 == str2
 }
 
+// asNumber
+//
+// Reverses the number mathematically and compares to the original one
 func asNumber(x int) bool {
 	buf := x
 	reversed := 0
