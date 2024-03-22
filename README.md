@@ -23,3 +23,4 @@ Leetcode solutions
 - [symmetric tree](./src/symmetric_tree/symmetric_tree.go) - [description](https://leetcode.com/problems/symmetric-tree)
 - [maximum depth of binary tree](./src/maximum_depth_of_binary_tree/maximum_depth_of_binary_tree.go) - [description](https://leetcode.com/problems/maximum-depth-of-binary-tree)
 - [convert sorted array to binary search tree](./src/convert_sorted_array_to_binary_search_tree/convert_sorted_array_to_binary_search_tree.go) - [description](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree)
+- [balanced binary tree](./src/balanced_binary_tree/balanced_binary_tree.go) - [description](https://leetcode.com/problems/balanced-binary-tree)
