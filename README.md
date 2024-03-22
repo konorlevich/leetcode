@@ -26,3 +26,4 @@ Leetcode solutions
 - [balanced binary tree](./src/balanced_binary_tree/balanced_binary_tree.go) - [description](https://leetcode.com/problems/balanced-binary-tree)
 - [minimum depth of binary tree](./src/minimum_depth_of_binary_tree/minimum_depth_of_binary_tree.go) - [description](https://leetcode.com/problems/minimum-depth-of-binary-tree)
 - [path sum](./src/path_sum/path_sum.go) - [description](https://leetcode.com/problems/path-sum)
+- [pascal's triangle](./src/pascal_s_triangle/pascal_s_triangle.go) - [description](https://leetcode.com/problems/pascals-triangle)
