@@ -25,3 +25,4 @@ Leetcode solutions
 - [convert sorted array to binary search tree](./src/convert_sorted_array_to_binary_search_tree/convert_sorted_array_to_binary_search_tree.go) - [description](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree)
 - [balanced binary tree](./src/balanced_binary_tree/balanced_binary_tree.go) - [description](https://leetcode.com/problems/balanced-binary-tree)
 - [minimum depth of binary tree](./src/minimum_depth_of_binary_tree/minimum_depth_of_binary_tree.go) - [description](https://leetcode.com/problems/minimum-depth-of-binary-tree)
+- [path sum](./src/path_sum/path_sum.go) - [description](https://leetcode.com/problems/path-sum)
