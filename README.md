@@ -19,3 +19,4 @@ Leetcode solutions
 - [remove duplicates from sorted list](./src/remove_duplicates_from_sorted_list/remove_duplicates_from_sorted_list.go) - [description](https://leetcode.com/problems/remove-duplicates-from-sorted-list)
 - [merge sorted array](./src/merge_sorted_array/merge_sorted_array.go) - [description](https://leetcode.com/problems/merge-sorted-array)
 - [binary tree inorder traversal](./src/binary_tree_inorder_traversal/binary_tree_inorder_traversal.go) - [description](https://leetcode.com/problems/binary-tree-inorder-traversal)
+- [same tree](./src/same_tree/same_tree.go) - [description](https://leetcode.com/problems/same-tree)
