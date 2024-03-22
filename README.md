@@ -20,3 +20,4 @@ Leetcode solutions
 - [merge sorted array](./src/merge_sorted_array/merge_sorted_array.go) - [description](https://leetcode.com/problems/merge-sorted-array)
 - [binary tree inorder traversal](./src/binary_tree_inorder_traversal/binary_tree_inorder_traversal.go) - [description](https://leetcode.com/problems/binary-tree-inorder-traversal)
 - [same tree](./src/same_tree/same_tree.go) - [description](https://leetcode.com/problems/same-tree)
+- [symmetric tree](./src/symmetric_tree/symmetric_tree.go) - [description](https://leetcode.com/problems/symmetric-tree)
