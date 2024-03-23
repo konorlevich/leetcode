@@ -4,6 +4,7 @@
 ## Solutions
 
 - [1. Two sum](./src/two_sum/two_sum.go) - [description](https://leetcode.com/problems/two-sum)  ![easy](https://img.shields.io/badge/easy-difficulty?logo=leetcode&color=%2334cf58 "difficulty")
+- [2. Add Two Numbers](./src/add_two_numbers/add_two_numbers.go) - [description](https://leetcode.com/problems/add-two-numbers/)  ![medium](https://img.shields.io/badge/medium-difficulty?style=flat&logo=leetcode&color=%23fa7d1d&link=https%3A%2F%2Fleetcode.com%2Fproblems%2Fadd-two-numbers "difficulty")
 - [9. Palindrome number](./src/palindrome/palindrome.go) - [description](https://leetcode.com/problems/palindrome-number)  ![easy](https://img.shields.io/badge/easy-difficulty?logo=leetcode&color=%2334cf58 "difficulty")
 - [13. roman to integer](./src/roman_to_integer/roman_to_integer.go) - [description](https://leetcode.com/problems/roman-to-integer)  ![easy](https://img.shields.io/badge/easy-difficulty?logo=leetcode&color=%2334cf58 "difficulty")
 - [14. longest common prefix](./src/longest_common_prefix/longest_common_prefix.go) - [description](https://leetcode.com/problems/longest-common-prefix)  ![easy](https://img.shields.io/badge/easy-difficulty?logo=leetcode&color=%2334cf58 "difficulty")
