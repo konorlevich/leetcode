@@ -85,6 +85,7 @@ func Test_generate(t *testing.T) {
 			t.Parallel()
 			for s, f := range funcs {
 				t.Run(s, func(t *testing.T) {
+					t.Parallel()
 					if diff := cmp.Diff(tt.want, f(tt.numRows)); diff != "" {
 						t.Errorf("generate()\n%s", diff)
 					}

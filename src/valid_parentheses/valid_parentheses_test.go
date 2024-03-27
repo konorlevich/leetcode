@@ -34,6 +34,7 @@ func Test_isValid(t *testing.T) {
 			t.Parallel()
 			for s, f := range funcs {
 				t.Run(s, func(t *testing.T) {
+					t.Parallel()
 					if got := isValid(f, tt.s); got != tt.want {
 						t.Errorf("%s() = %v, want %v", s, got, tt.want)
 					}

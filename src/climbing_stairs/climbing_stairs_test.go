@@ -30,6 +30,7 @@ func Test_climbStairs(t *testing.T) {
 			t.Parallel()
 			for s, f := range funcs {
 				t.Run(s, func(t *testing.T) {
+					t.Parallel()
 					if got := climbStairs(f, tt.n); got != tt.want {
 						t.Errorf("%s() = %v, want %v", s, got, tt.want)
 					}

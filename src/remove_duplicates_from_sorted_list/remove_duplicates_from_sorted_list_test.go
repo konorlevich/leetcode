@@ -33,6 +33,7 @@ func Test_deleteDuplicates(t *testing.T) {
 			t.Parallel()
 			for s, f := range funcs {
 				t.Run(s, func(t *testing.T) {
+					t.Parallel()
 					if diff := cmp.Diff(tt.want, deleteDuplicates(f, tt.head)); diff != "" {
 						t.Errorf("%s()\n%s", s, diff)
 					}
