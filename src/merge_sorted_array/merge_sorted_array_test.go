@@ -60,6 +60,7 @@ func Test_merge(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			merge(tt.nums1, tt.m, tt.nums2, tt.n)
 			if diff := cmp.Diff(tt.want, tt.nums1); diff != "" {
 				t.Errorf("merge()\n%s", diff)

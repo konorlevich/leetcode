@@ -49,6 +49,7 @@ func Test_isBalanced(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			if got := isBalanced(tt.root); got != tt.want {
 				t.Errorf("isBalanced() = %v, want %v", got, tt.want)
 			}

@@ -16,6 +16,7 @@ func Test_strStr(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			if got := strStr(tt.haystack, tt.needle); got != tt.want {
 				t.Errorf("strStr() = %v, want %v", got, tt.want)
 			}

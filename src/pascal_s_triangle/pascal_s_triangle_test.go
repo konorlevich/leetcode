@@ -82,6 +82,7 @@ func Test_generate(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			for s, f := range funcs {
 				t.Run(s, func(t *testing.T) {
 					if diff := cmp.Diff(tt.want, f(tt.numRows)); diff != "" {

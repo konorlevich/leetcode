@@ -32,6 +32,7 @@ func Test_addTwoNumbers(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			if diff := cmp.Diff(tt.want, addTwoNumbers(tt.l1, tt.l2)); diff != "" {
 				t.Errorf("addTwoNumbers()\n%s", diff)
 			}

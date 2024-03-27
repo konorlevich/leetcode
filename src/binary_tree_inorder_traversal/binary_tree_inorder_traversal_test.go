@@ -33,6 +33,7 @@ func Test_inorderTraversal(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			for fName, f := range funcs {
 				t.Run(fName, func(t *testing.T) {
 					if diff := cmp.Diff(tt.want, f(tt.root)); diff != "" {

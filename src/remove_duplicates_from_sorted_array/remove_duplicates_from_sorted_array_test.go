@@ -33,6 +33,7 @@ func Test_removeDuplicates(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			nums := tt.nums
 			got := removeDuplicates(nums)
 			if got != tt.want {

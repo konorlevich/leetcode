@@ -29,6 +29,7 @@ func Test_removeElement(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			got := removeElement(tt.nums, tt.val)
 			if got != tt.want {
 				t.Errorf("removeElement() = %v, want %v", got, tt.want)

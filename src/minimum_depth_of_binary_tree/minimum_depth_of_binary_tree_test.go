@@ -32,6 +32,7 @@ func Test_minDepth(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			if got := minDepth(tt.root); got != tt.want {
 				t.Errorf("minDepth() = %v, want %v", got, tt.want)
 			}
@@ -58,6 +59,7 @@ func Test_minNum(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			if gotMin := minNum(tt.nums...); gotMin != tt.want {
 				t.Errorf("minNum() = %v, want %v", gotMin, tt.want)
 			}

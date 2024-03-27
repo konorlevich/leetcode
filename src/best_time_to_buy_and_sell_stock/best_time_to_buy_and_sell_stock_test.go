@@ -27793,6 +27793,7 @@ func Test_maxProfit(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			for name, f := range funcs {
 				t.Run(name, func(t *testing.T) {
 					if got := f(tt.prices); got != tt.want {

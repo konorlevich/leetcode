@@ -29,6 +29,7 @@ func Test_plusOne(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			if diff := cmp.Diff(tt.want, plusOne(tt.digits)); diff != "" {
 				t.Errorf("plusOne()\n%s", diff)
 			}

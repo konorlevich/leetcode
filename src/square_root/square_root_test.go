@@ -22,6 +22,7 @@ func Test_mySqrt(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			if got := mySqrt(tt.x); got != tt.want {
 				t.Errorf("mySqrt() = %v, want %v", got, tt.want)
 			}

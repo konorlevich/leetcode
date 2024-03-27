@@ -48,6 +48,7 @@ func Test_sortedArrayToBST(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
 			got := sortedArrayToBST(tt.nums)
 			diffs := make([]string, len(tt.wantOneOf))
 			for i, node := range tt.wantOneOf {
