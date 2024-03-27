@@ -34,3 +34,4 @@
 - [118. pascal's triangle](./src/pascal_s_triangle/pascal_s_triangle.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/pascals-triangle)
 - [121. Best Time to Buy and Sell Stock](./src/best_time_to_buy_and_sell_stock/best_time_to_buy_and_sell_stock.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 - [125. Valid Palindrome](./src/valid_palindrome/valid_palindrome.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/valid-palindrome)
+- [136. Single Number](./src/single_number/single_number.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/single-number)
