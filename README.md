@@ -37,3 +37,4 @@
 - [136. Single Number](./src/single_number/single_number.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/single-number)
 - [141. Linked List Cycle](./src/linked_list_cycle/linked_list_cycle.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/linked-list-cycle)
 - [160. Intersection of Two Linked Lists](./src/intersection_of_two_linked_lists/intersection_of_two_linked_lists.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/intersection-of-two-linked-lists)
+- [163. Missing Ranges](./src/missing_ranges/missing_ranges.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/missing-ranges)
