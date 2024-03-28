@@ -5,7 +5,7 @@ import (
 )
 
 var funcs = map[string]func(prices []int) int{
-	"brute force":   bruteForce,
+	//"brute force":   bruteForce,
 	"min max pairs": minMax,
 }
 
