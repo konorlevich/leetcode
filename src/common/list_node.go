@@ -12,17 +12,24 @@ type ListNode struct {
 //
 // Creates a sorted list (ListNode), defined by the integer sequence
 func CreateList(nums []int) (l *ListNode) {
-	curNode := &ListNode{}
-	for _, i := range nums {
-		if l == nil {
-			curNode.Val = i
-			l = curNode
-			continue
-		}
-		curNode.Next = &ListNode{Val: i}
-		curNode = curNode.Next
+	return WrapNode(nums, l)
+}
+
+// CreateTwoIntersectedLists
+//
+// Creates two lists, with common tail
+func CreateTwoIntersectedLists(numsA, numsB, tailNums []int) (*ListNode, *ListNode, *ListNode) {
+	tail := WrapNode(tailNums, nil)
+	return WrapNode(numsA, tail), WrapNode(numsB, tail), tail
+}
+
+func WrapNode(nums []int, node *ListNode) (head *ListNode) {
+	head = node
+	for i := len(nums) - 1; i >= 0; i-- {
+		head = &ListNode{Val: nums[i],
+			Next: head}
 	}
-	return l
+	return
 }
 
 // CreateListWithCycle
