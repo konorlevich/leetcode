@@ -34,3 +34,21 @@ func hasCycleWithNodeBuffer(head *common.ListNode) bool {
 	}
 	return false
 }
+
+func hasCycleWithPointers(head *common.ListNode) bool {
+	if head == nil || head.Next == nil {
+		return false
+	}
+	s, f := head, head.Next
+
+	for s != nil && f != nil {
+		if s == f {
+			return true
+		}
+		if s.Next == nil || f.Next == nil || f.Next.Next == nil {
+			return false
+		}
+		s, f = s.Next, f.Next.Next
+	}
+	return false
+}
