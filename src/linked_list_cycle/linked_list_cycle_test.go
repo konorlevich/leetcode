@@ -6,8 +6,9 @@ import (
 )
 
 var funcs = map[string]func(head *common.ListNode) bool{
-	"with node buffer":            hasCycleWithNodeBuffer,
-	"with slow and fast pointers": hasCycleWithPointers,
+	"with node buffer":              hasCycleWithNodeBuffer,
+	"with slow and fast pointers":   hasCycleWithPointers,
+	"with slow and fast pointers 2": hasCycleWithPointers2,
 }
 
 func Test_hasCycle(t *testing.T) {

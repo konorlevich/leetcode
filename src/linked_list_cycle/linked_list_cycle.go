@@ -35,6 +35,13 @@ func hasCycleWithNodeBuffer(head *common.ListNode) bool {
 	return false
 }
 
+// hasCycleWithPointers
+//
+// An approach with slow and fast pointers I came up with by myself.
+// We create two pointers with `head` and `head.Next`, then we iterate over the list,
+// slow pointer receives `head.Next`, fast one receives `head.Next.Next`.
+// As soon as we see nil in slow or fast pointer, we return false.
+// If slow == fast, return true.
 func hasCycleWithPointers(head *common.ListNode) bool {
 	if head == nil || head.Next == nil {
 		return false
@@ -45,10 +52,29 @@ func hasCycleWithPointers(head *common.ListNode) bool {
 		if s == f {
 			return true
 		}
-		if s.Next == nil || f.Next == nil || f.Next.Next == nil {
+		if s.Next == nil || f.Next == nil {
 			return false
 		}
 		s, f = s.Next, f.Next.Next
+	}
+	return false
+}
+
+// hasCycleWithPointers2
+//
+// Optimized and cleaned solution. We start with slow and fast pointer equal `head`.
+// Each iteration `slow` steps to `.Next`, `fast` steps `.Next.Next`, then we check for nil or equality.
+func hasCycleWithPointers2(head *common.ListNode) bool {
+	if head == nil || head.Next == nil {
+		return false
+	}
+	s, f := head, head
+
+	for s != nil && f != nil && s.Next != nil && f.Next != nil {
+		s, f = s.Next, f.Next.Next
+		if s == f {
+			return true
+		}
 	}
 	return false
 }
