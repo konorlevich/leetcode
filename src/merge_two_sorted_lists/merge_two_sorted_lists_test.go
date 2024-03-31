@@ -56,6 +56,17 @@ func Test_mergeTwoLists(t *testing.T) {
 			list2: list.Create([]int{2, 1, 4}),
 			want:  list.Create([]int{1, 2, 4, 5, 6}),
 		},
+		{
+			name:  "8",
+			list1: list.Create([]int{1, 2, 4}),
+			list2: list.Create([]int{5, 6}),
+			want:  list.Create([]int{1, 2, 4, 5, 6}),
+		},
+		{
+			name:  "9",
+			list1: list.Create([]int{1, 2, 4}),
+			want:  list.Create([]int{1, 2, 4}),
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

@@ -1,3 +1,10 @@
+// Package merge_two_sorted_lists
+//
+// You are given the heads of two sorted linked lists list1 and list2.
+//
+// Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+//
+// Return the head of the merged linked list.
 package merge_two_sorted_lists
 
 import (
@@ -5,12 +12,6 @@ import (
 )
 
 // mergeTwoLists
-//
-// You are given the heads of two sorted linked lists list1 and list2.
-//
-// Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
-//
-// Return the head of the merged linked list.
 func mergeTwoLists(list1 *list.Node, list2 *list.Node) *list.Node {
 	if list1 == nil {
 		return list2
