@@ -1,11 +1,12 @@
-package median_of_two_sorted_arrays
-
-// findMedianSortedArrays
+// Package median_of_two_sorted_arrays
 //
 // Given two sorted arrays `nums1` and `nums2` of size `m` and `n` respectively,
 // return the median of the two sorted arrays.
 //
 // The overall run time complexity should be `O(log(m+n))`.
+package median_of_two_sorted_arrays
+
+// findMedianSortedArrays
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 	if len(nums1) == 0 && len(nums2) == 0 {
 		return 0
