@@ -1,8 +1,4 @@
-package remove_duplicates_from_sorted_array
-
-import "math"
-
-// removeDuplicates
+// Package remove_duplicates_from_sorted_array
 //
 // Given an integer array nums sorted in non-decreasing order,
 // remove the duplicates in-place such that each unique element appears only once.
@@ -17,6 +13,11 @@ import "math"
 // - The remaining elements of nums are not important as well as the size of nums.
 //
 // - Return k.
+package remove_duplicates_from_sorted_array
+
+import "math"
+
+// removeDuplicates
 func removeDuplicates(nums []int) int {
 	prev := -math.MaxInt
 	prevIndex := -1
