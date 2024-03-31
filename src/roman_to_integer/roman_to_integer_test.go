@@ -23,7 +23,6 @@ func Test_romanToInt(t *testing.T) {
 			if got := romanToInt(tt.s); got != tt.want {
 				t.Errorf("romanToInt() = %v, want %v", got, tt.want)
 			}
-
 		})
 	}
 }

@@ -1,16 +1,5 @@
-package roman_to_integer
-
-var numbers = map[string]int{
-	"I": 1,
-	"V": 5,
-	"X": 10,
-	"L": 50,
-	"C": 100,
-	"D": 500,
-	"M": 1000,
-}
-
-// romanToInt
+// Package roman_to_integer
+//
 // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. (numbers)
 //
 // For example, 2 is written as II in Roman numeral, just two ones added together.
@@ -31,6 +20,19 @@ var numbers = map[string]int{
 // - C can be placed before D (500) and M (1000) to make 400 and 900.
 //
 // Given a roman numeral, convert it to an integer.
+package roman_to_integer
+
+var numbers = map[string]int{
+	"I": 1,
+	"V": 5,
+	"X": 10,
+	"L": 50,
+	"C": 100,
+	"D": 500,
+	"M": 1000,
+}
+
+// romanToInt
 func romanToInt(s string) (result int) {
 	var prev int
 	var cur int
