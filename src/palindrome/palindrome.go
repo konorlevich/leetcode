@@ -1,13 +1,9 @@
+// Package palindrome
+//
+// Given an integer x, return true if x is a palindrome, and false otherwise.
 package palindrome
 
 import "fmt"
-
-// isPalindrome
-//
-// Given an integer x, return true if x is a palindrome, and false otherwise.
-func isPalindrome(f func(x int) bool, x int) bool {
-	return f(x)
-}
 
 // asString
 //

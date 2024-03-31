@@ -24,7 +24,7 @@ func Test_isPalindrome(t *testing.T) {
 			for s, f := range funcs {
 				t.Run(s, func(t *testing.T) {
 					t.Parallel()
-					if got := isPalindrome(f, tt.x); got != tt.want {
+					if got := f(tt.x); got != tt.want {
 						t.Errorf("%s() = %v, want %v", s, got, tt.want)
 					}
 				})
