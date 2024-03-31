@@ -1,14 +1,14 @@
-package minimum_depth_of_binary_tree
-
-import "github.com/konorlevich/leetcode/src/common"
-
-// minDepth
+// Package minimum_depth_of_binary_tree
 //
 // Given a binary tree, find its minimum depth.
 //
 // The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 //
 // Note: A leaf is a node with no children.
+package minimum_depth_of_binary_tree
+
+import "github.com/konorlevich/leetcode/src/common"
+
 func minDepth(root *common.TreeNode) int {
 	if root == nil {
 		return 0
