@@ -1,9 +1,11 @@
-package longest_substring_without_repeating_characters
-
-// lengthOfLongestSubstring
+// Package longest_substring_without_repeating_characters
+//
 // Given a string s, find the length of the longest substring without repeating characters.
 //
 // A substring is a contiguous non-empty sequence of characters within a string.
+package longest_substring_without_repeating_characters
+
+// lengthOfLongestSubstring
 func lengthOfLongestSubstring(s string) (maxLen int) {
 	known := make([]int32, 0, len(s))
 	curLen := 0
