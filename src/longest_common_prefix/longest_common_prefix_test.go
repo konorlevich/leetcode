@@ -14,6 +14,7 @@ func Test_longestCommonPrefix(t *testing.T) {
 		{name: "3", strs: []string{"a"}, want: "a"},
 		{name: "4", strs: []string{"ab", "a"}, want: "a"},
 		{name: "5", strs: []string{"abab", "aba", ""}, want: ""},
+		{name: "5", strs: []string{"flower", "flower", "flower", "flower", "flower"}, want: "flower"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
