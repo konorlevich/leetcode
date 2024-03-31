@@ -22,6 +22,16 @@ func Test_maxDepth(t *testing.T) {
 					Right: &common.TreeNode{Val: 7}},
 			},
 			want: 3},
+
+		{name: "3,9,20,15,7,null,null",
+			root: &common.TreeNode{
+				Val: 3,
+				Left: &common.TreeNode{Val: 9,
+					Left:  &common.TreeNode{Val: 15},
+					Right: &common.TreeNode{Val: 7}},
+				Right: &common.TreeNode{Val: 20},
+			},
+			want: 3},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

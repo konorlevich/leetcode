@@ -1,13 +1,13 @@
-package maximum_depth_of_binary_tree
-
-import "github.com/konorlevich/leetcode/src/common"
-
-// maxDepth
+// Package maximum_depth_of_binary_tree
 //
 // Given the root of a binary tree, return its maximum depth.
 //
 // A binary tree's maximum depth is the number of nodes along the longest path
 // from the root node down to the farthest leaf node.
+package maximum_depth_of_binary_tree
+
+import "github.com/konorlevich/leetcode/src/common"
+
 func maxDepth(root *common.TreeNode) int {
 	if root == nil {
 		return 0
