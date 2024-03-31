@@ -1,13 +1,13 @@
-package path_sum
-
-import "github.com/konorlevich/leetcode/src/common"
-
-// hasPathSum
+// Package path_sum
 //
 // Given the root of a binary tree and an integer targetSum,
 // return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
 //
 // A leaf is a node with no children.
+package path_sum
+
+import "github.com/konorlevich/leetcode/src/common"
+
 func hasPathSum(root *common.TreeNode, targetSum int) bool {
 	if root == nil {
 		return false
