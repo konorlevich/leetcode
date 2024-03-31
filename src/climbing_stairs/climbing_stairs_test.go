@@ -1,7 +1,6 @@
 package climbing_stairs
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -31,7 +30,7 @@ func Test_climbStairs(t *testing.T) {
 			for s, f := range funcs {
 				t.Run(s, func(t *testing.T) {
 					t.Parallel()
-					if got := climbStairs(f, tt.n); got != tt.want {
+					if got := f(tt.n); got != tt.want {
 						t.Errorf("%s() = %v, want %v", s, got, tt.want)
 					}
 				})
@@ -42,19 +41,10 @@ func Test_climbStairs(t *testing.T) {
 }
 
 func Benchmark_climbStairs(b *testing.B) {
-	cases := map[int]int{
-		10: 10,
-		25: 25,
-		45: 45,
-	}
-	for target, ints := range cases {
-		b.Run(fmt.Sprintf("%d", target), func(b *testing.B) {
-			for s, f := range funcs {
-				b.Run(s, func(b *testing.B) {
-					for i := 0; i < b.N; i++ {
-						climbStairs(f, ints)
-					}
-				})
+	for s, f := range funcs {
+		b.Run(s, func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				f(1000)
 			}
 		})
 	}
