@@ -1,11 +1,11 @@
 package linked_list_cycle
 
 import (
-	"github.com/konorlevich/leetcode/src/common"
+	"github.com/konorlevich/leetcode/src/common/list"
 	"testing"
 )
 
-var funcs = map[string]func(head *common.ListNode) bool{
+var funcs = map[string]func(head *list.Node) bool{
 	"with node buffer":              hasCycleWithNodeBuffer,
 	"with slow and fast pointers":   hasCycleWithPointers,
 	"with slow and fast pointers 2": hasCycleWithPointers2,
@@ -14,37 +14,37 @@ var funcs = map[string]func(head *common.ListNode) bool{
 func Test_hasCycle(t *testing.T) {
 	tests := []struct {
 		name string
-		head *common.ListNode
+		head *list.Node
 		want bool
 	}{
 
 		{name: "head = [3,2,0,-4], pos = 1",
-			head: common.CreateListWithCycle([]int{3, 2, 0, -4}, 1),
+			head: list.CreateWithCycle([]int{3, 2, 0, -4}, 1),
 			want: true,
 		},
 
 		{name: "head = [3,2,0,-4], pos = -1",
-			head: common.CreateListWithCycle([]int{3, 2, 0, -4}, -1),
+			head: list.CreateWithCycle([]int{3, 2, 0, -4}, -1),
 			want: false,
 		},
 
 		{name: "head = [1,2], pos = 0",
-			head: common.CreateListWithCycle([]int{1, 2}, 0),
+			head: list.CreateWithCycle([]int{1, 2}, 0),
 			want: true,
 		},
 
 		{name: "head = [1,2], pos = -1",
-			head: common.CreateListWithCycle([]int{1, 2}, -1),
+			head: list.CreateWithCycle([]int{1, 2}, -1),
 			want: false,
 		},
 
 		{name: "head = [1], pos = -1",
-			head: common.CreateListWithCycle([]int{1}, -1),
+			head: list.CreateWithCycle([]int{1}, -1),
 			want: false,
 		},
 
 		{name: "head = [1], pos = 0",
-			head: common.CreateListWithCycle([]int{1}, 0),
+			head: list.CreateWithCycle([]int{1}, 0),
 			want: true,
 		},
 
@@ -71,7 +71,7 @@ func Benchmark_hasCycle(b *testing.B) {
 	for s, f := range funcs {
 		b.Run(s, func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				f(common.CreateListWithCycle([]int{
+				f(list.CreateWithCycle([]int{
 					3, 2, 0, -4, 3,
 					2, 0, -4, 3, 2,
 					0, -4, 3, 2, 0,

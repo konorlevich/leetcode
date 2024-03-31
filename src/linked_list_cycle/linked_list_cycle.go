@@ -10,18 +10,20 @@
 // Return true if there is a cycle in the linked list. Otherwise, return false.
 package linked_list_cycle
 
-import "github.com/konorlevich/leetcode/src/common"
+import (
+	"github.com/konorlevich/leetcode/src/common/list"
+)
 
 // hasCycleWithNodeBuffer
 //
 // We iterate over the list, checking if we know current node, save it otherwise.
 //
 // Straight-forward and memory-consuming solution
-func hasCycleWithNodeBuffer(head *common.ListNode) bool {
+func hasCycleWithNodeBuffer(head *list.Node) bool {
 	if head == nil {
 		return false
 	}
-	nodes := []*common.ListNode{head}
+	nodes := []*list.Node{head}
 	node := head.Next
 	for node != nil {
 		for _, savedNode := range nodes {
@@ -42,7 +44,7 @@ func hasCycleWithNodeBuffer(head *common.ListNode) bool {
 // slow pointer receives `head.Next`, fast one receives `head.Next.Next`.
 // As soon as we see nil in slow or fast pointer, we return false.
 // If slow == fast, return true.
-func hasCycleWithPointers(head *common.ListNode) bool {
+func hasCycleWithPointers(head *list.Node) bool {
 	if head == nil || head.Next == nil {
 		return false
 	}
@@ -64,7 +66,7 @@ func hasCycleWithPointers(head *common.ListNode) bool {
 //
 // Optimized and cleaned solution. We start with slow and fast pointer equal `head`.
 // Each iteration `slow` steps to `.Next`, `fast` steps `.Next.Next`, then we check for nil or equality.
-func hasCycleWithPointers2(head *common.ListNode) bool {
+func hasCycleWithPointers2(head *list.Node) bool {
 	if head == nil || head.Next == nil {
 		return false
 	}

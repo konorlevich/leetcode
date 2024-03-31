@@ -3,19 +3,21 @@
 // Given the head of a singly linked list, reverse the list, and return the reversed list.
 package reverse_linked_list
 
-import "github.com/konorlevich/leetcode/src/common"
+import (
+	"github.com/konorlevich/leetcode/src/common/list"
+)
 
 // iterative
 //
 // As a first step we create a new node with current value.
 // Then we wrap it iteratively with each Next.
-func iterative(head *common.ListNode) (newHead *common.ListNode) {
+func iterative(head *list.Node) (newHead *list.Node) {
 	if head == nil {
 		return nil
 	}
-	newHead = &common.ListNode{Val: head.Val}
+	newHead = &list.Node{Val: head.Val}
 	for head.Next != nil {
-		newHead = &common.ListNode{
+		newHead = &list.Node{
 			Val:  head.Next.Val,
 			Next: newHead}
 		head = head.Next
@@ -26,18 +28,18 @@ func iterative(head *common.ListNode) (newHead *common.ListNode) {
 // recursive
 //
 // See wrap
-func recursive(head *common.ListNode) (newHead *common.ListNode) {
+func recursive(head *list.Node) (newHead *list.Node) {
 	return wrap(head, nil)
 }
 
 // wrap
 //
 // We recursively wrap current.Val as a next value for current.Next
-func wrap(current, next *common.ListNode) (newNode *common.ListNode) {
+func wrap(current, next *list.Node) (newNode *list.Node) {
 	if current == nil {
 		return next
 	}
-	return wrap(current.Next, &common.ListNode{
+	return wrap(current.Next, &list.Node{
 		Val:  current.Val,
 		Next: next,
 	})

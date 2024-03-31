@@ -3,11 +3,11 @@ package remove_duplicates_from_sorted_list
 import (
 	"fmt"
 	"github.com/google/go-cmp/cmp"
-	"github.com/konorlevich/leetcode/src/common"
+	"github.com/konorlevich/leetcode/src/common/list"
 	"testing"
 )
 
-var funcs = map[string]func(head *common.ListNode) *common.ListNode{
+var funcs = map[string]func(head *list.Node) *list.Node{
 	"iterative": iterative,
 	"recursive": recursive,
 }
@@ -15,17 +15,17 @@ var funcs = map[string]func(head *common.ListNode) *common.ListNode{
 func Test_deleteDuplicates(t *testing.T) {
 	tests := []struct {
 		name string
-		head *common.ListNode
-		want *common.ListNode
+		head *list.Node
+		want *list.Node
 	}{
 		{name: "empty"},
 		{name: "1,1,2",
-			head: common.CreateList([]int{1, 1, 2}),
-			want: common.CreateList([]int{1, 2}),
+			head: list.Create([]int{1, 1, 2}),
+			want: list.Create([]int{1, 2}),
 		},
 		{name: "1,1,2,3,3",
-			head: common.CreateList([]int{1, 1, 2, 3, 3}),
-			want: common.CreateList([]int{1, 2, 3}),
+			head: list.Create([]int{1, 1, 2, 3, 3}),
+			want: list.Create([]int{1, 2, 3}),
 		},
 	}
 	for _, tt := range tests {
@@ -61,7 +61,7 @@ func Benchmark_deleteDuplicates(b *testing.B) {
 		},
 	}
 	for target, ints := range cases {
-		list := common.CreateList(ints)
+		list := list.Create(ints)
 		b.Run(fmt.Sprintf("%d", target), func(b *testing.B) {
 			for s, f := range funcs {
 				b.Run(s, func(b *testing.B) {

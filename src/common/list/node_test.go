@@ -1,4 +1,4 @@
-package common
+package list
 
 import (
 	"github.com/google/go-cmp/cmp"
@@ -10,38 +10,38 @@ func Test_CreateList(t *testing.T) {
 	tests := []struct {
 		name string
 		nums []int
-		want *ListNode
+		want *Node
 	}{
 		{name: "empty"},
 		{
 			name: "[1,2,3]",
 			nums: []int{1, 2, 3},
-			want: &ListNode{
+			want: &Node{
 				Val: 1,
-				Next: &ListNode{
+				Next: &Node{
 					Val: 2,
-					Next: &ListNode{
+					Next: &Node{
 						Val: 3,
 					}}}},
 		{
 			name: "[0,9,8,7,6,5,4,3,2,1]",
 			nums: []int{0, 9, 8, 7, 6, 5, 4, 3, 2, 1},
-			want: &ListNode{Val: 0,
-				Next: &ListNode{Val: 9,
-					Next: &ListNode{Val: 8,
-						Next: &ListNode{Val: 7,
-							Next: &ListNode{Val: 6,
-								Next: &ListNode{Val: 5,
-									Next: &ListNode{Val: 4,
-										Next: &ListNode{Val: 3,
-											Next: &ListNode{Val: 2,
-												Next: &ListNode{Val: 1},
+			want: &Node{Val: 0,
+				Next: &Node{Val: 9,
+					Next: &Node{Val: 8,
+						Next: &Node{Val: 7,
+							Next: &Node{Val: 6,
+								Next: &Node{Val: 5,
+									Next: &Node{Val: 4,
+										Next: &Node{Val: 3,
+											Next: &Node{Val: 2,
+												Next: &Node{Val: 1},
 											}}}}}}}}}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			t.Parallel()
-			if got := CreateList(tt.nums); !reflect.DeepEqual(got, tt.want) {
+			if got := Create(tt.nums); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("createList() = %v, want %v", got, tt.want)
 			}
 		})
@@ -53,19 +53,19 @@ func TestCreateListWithCycle(t *testing.T) {
 		name  string
 		nums  []int
 		pos   int
-		wantL *ListNode
+		wantL *Node
 	}{
 		{name: "empty"},
 
 		{name: "head = [3,2,0,-4], pos = 1",
 			nums: []int{3, 2, 0, -4},
 			pos:  1,
-			wantL: func() *ListNode {
-				cycled := &ListNode{Val: 2}
-				cycled.Next = &ListNode{Val: 0,
-					Next: &ListNode{Val: -4}}
+			wantL: func() *Node {
+				cycled := &Node{Val: 2}
+				cycled.Next = &Node{Val: 0,
+					Next: &Node{Val: -4}}
 				cycled.Next.Next.Next = cycled
-				return &ListNode{
+				return &Node{
 					Val:  3,
 					Next: cycled,
 				}
@@ -75,15 +75,15 @@ func TestCreateListWithCycle(t *testing.T) {
 		{name: "head = [3,2,0,-4], pos = -1",
 			nums:  []int{3, 2, 0, -4},
 			pos:   -1,
-			wantL: CreateList([]int{3, 2, 0, -4}),
+			wantL: Create([]int{3, 2, 0, -4}),
 		},
 
 		{name: "head = [1,2], pos = 0",
 			nums: []int{1, 2},
 			pos:  0,
-			wantL: func() *ListNode {
-				cycled := &ListNode{Val: 1}
-				cycled.Next = &ListNode{Val: 2, Next: cycled}
+			wantL: func() *Node {
+				cycled := &Node{Val: 1}
+				cycled.Next = &Node{Val: 2, Next: cycled}
 				return cycled
 			}(),
 		},
@@ -91,14 +91,14 @@ func TestCreateListWithCycle(t *testing.T) {
 		{name: "head = [1,2], pos = -1",
 			nums:  []int{1, 2},
 			pos:   -1,
-			wantL: CreateList([]int{1, 2}),
+			wantL: Create([]int{1, 2}),
 		},
 
 		{name: "head = [1], pos = 0",
 			nums: []int{1},
 			pos:  0,
-			wantL: func() *ListNode {
-				cycled := &ListNode{Val: 1}
+			wantL: func() *Node {
+				cycled := &Node{Val: 1}
 				cycled.Next = cycled
 				return cycled
 			}(),
@@ -107,13 +107,13 @@ func TestCreateListWithCycle(t *testing.T) {
 		{name: "head = [1], pos = -1",
 			nums:  []int{1},
 			pos:   -1,
-			wantL: CreateList([]int{1}),
+			wantL: Create([]int{1}),
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if diff := cmp.Diff(tt.wantL, CreateListWithCycle(tt.nums, tt.pos)); diff != "" {
-				t.Errorf("CreateListWithCycle()\n%s", diff)
+			if diff := cmp.Diff(tt.wantL, CreateWithCycle(tt.nums, tt.pos)); diff != "" {
+				t.Errorf("CreateWithCycle()\n%s", diff)
 			}
 		})
 	}
@@ -123,28 +123,28 @@ func Test_WrapNode(t *testing.T) {
 	tests := []struct {
 		name string
 		nums []int
-		node *ListNode
-		want *ListNode
+		node *Node
+		want *Node
 	}{
 		{name: "empty"},
 		{
 			name: "[1,2]+[3,4,5]", nums: []int{1, 2},
-			node: &ListNode{
+			node: &Node{
 				Val: 3,
-				Next: &ListNode{
+				Next: &Node{
 					Val:  4,
-					Next: &ListNode{Val: 5},
+					Next: &Node{Val: 5},
 				},
 			},
-			want: &ListNode{
+			want: &Node{
 				Val: 1,
-				Next: &ListNode{
+				Next: &Node{
 					Val: 2,
-					Next: &ListNode{
+					Next: &Node{
 						Val: 3,
-						Next: &ListNode{
+						Next: &Node{
 							Val:  4,
-							Next: &ListNode{Val: 5},
+							Next: &Node{Val: 5},
 						},
 					}}}},
 	}
@@ -160,7 +160,7 @@ func Test_WrapNode(t *testing.T) {
 
 func TestCreateTwoIntersectedLists(t *testing.T) {
 
-	tail1, tail2 := CreateList([]int{1, 2, 3}), CreateList([]int{3, 2, 1})
+	tail1, tail2 := Create([]int{1, 2, 3}), Create([]int{3, 2, 1})
 	tests := []struct {
 		name string
 
@@ -168,9 +168,9 @@ func TestCreateTwoIntersectedLists(t *testing.T) {
 		numsB    []int
 		tailNums []int
 
-		wantHeadA *ListNode
-		wantHeadB *ListNode
-		wantTail  *ListNode
+		wantHeadA *Node
+		wantHeadB *Node
+		wantTail  *Node
 	}{
 		{name: "empty"},
 		{name: "[4,5,6],[7,8,9,0], tail1",
@@ -201,6 +201,31 @@ func TestCreateTwoIntersectedLists(t *testing.T) {
 			}
 			if !reflect.DeepEqual(gotTail, tt.wantTail) {
 				t.Errorf("CreateTwoIntersectedLists() gotTail = %v, want %v", gotTail, tt.wantTail)
+			}
+		})
+	}
+}
+
+func Test_listLen(t *testing.T) {
+	tests := []struct {
+		name  string
+		head  *Node
+		wantI int
+	}{
+		{name: "empty"},
+		{name: "[1,2,3,4,5]",
+			head:  Create([]int{1, 2, 3, 4, 5}),
+			wantI: 5,
+		},
+		{name: "[1]",
+			head:  Create([]int{1}),
+			wantI: 1,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if gotI := Len(tt.head); gotI != tt.wantI {
+				t.Errorf("listLen() = %v, want %v", gotI, tt.wantI)
 			}
 		})
 	}

@@ -1,6 +1,8 @@
 package merge_two_sorted_lists
 
-import "github.com/konorlevich/leetcode/src/common"
+import (
+	"github.com/konorlevich/leetcode/src/common/list"
+)
 
 // mergeTwoLists
 //
@@ -9,7 +11,7 @@ import "github.com/konorlevich/leetcode/src/common"
 // Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
 //
 // Return the head of the merged linked list.
-func mergeTwoLists(list1 *common.ListNode, list2 *common.ListNode) *common.ListNode {
+func mergeTwoLists(list1 *list.Node, list2 *list.Node) *list.Node {
 	if list1 == nil {
 		return list2
 	} else if list2 == nil {
@@ -24,7 +26,7 @@ func mergeTwoLists(list1 *common.ListNode, list2 *common.ListNode) *common.ListN
 	}
 	if list2.Val < n.Val {
 		v := *n
-		list1 = &common.ListNode{Val: list2.Val, Next: &v}
+		list1 = &list.Node{Val: list2.Val, Next: &v}
 	} else {
 		list2.Next = n.Next
 		n.Next = list2

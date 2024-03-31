@@ -1,14 +1,16 @@
 package intersection_of_two_linked_lists
 
-import "github.com/konorlevich/leetcode/src/common"
+import (
+	"github.com/konorlevich/leetcode/src/common/list"
+)
 
 // getIntersectionNode
 //
 // At first, we have to equalize heads length. We measure its length and then move longer list forward.
 // Then we iterate over both lists and check if nodes are equal
-func getIntersectionNode(headA, headB *common.ListNode) *common.ListNode {
+func getIntersectionNode(headA, headB *list.Node) *list.Node {
 	hA, hB := headA, headB
-	lenA, lenB := listLen(hA), listLen(hB)
+	lenA, lenB := list.Len(hA), list.Len(hB)
 	if lenA > lenB {
 		hA = moveToNSteps(hA, lenA-lenB)
 	} else if lenB > lenA {
@@ -24,18 +26,8 @@ func getIntersectionNode(headA, headB *common.ListNode) *common.ListNode {
 	return nil
 }
 
-// listLen counts list nodes
-func listLen(head *common.ListNode) (i int) {
-	p := head
-	for p != nil {
-		i++
-		p = p.Next
-	}
-	return i
-}
-
 // moveToNSteps returns nth node from the list
-func moveToNSteps(head *common.ListNode, n int) (res *common.ListNode) {
+func moveToNSteps(head *list.Node, n int) (res *list.Node) {
 	res = head
 	for i := 0; i < n; i++ {
 		res = res.Next
