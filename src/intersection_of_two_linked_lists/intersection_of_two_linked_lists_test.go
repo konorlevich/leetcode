@@ -9,6 +9,7 @@ import (
 func Test_getIntersectionNode(t *testing.T) {
 	headA1, headB1, tail1 := list.CreateTwoIntersectedLists([]int{1, 2, 3}, []int{1, 2, 3}, []int{1, 2, 3})
 	headA2, headB2, tail2 := list.CreateTwoIntersectedLists([]int{1, 9, 1}, []int{3}, []int{2, 4})
+	headA3, headB3, tail3 := list.CreateTwoIntersectedLists([]int{3}, []int{1, 9, 1}, []int{2, 4})
 	tests := []struct {
 		name  string
 		headA *list.Node
@@ -31,6 +32,12 @@ func Test_getIntersectionNode(t *testing.T) {
 			headA: headA2,
 			headB: headB2,
 			want:  tail2,
+		},
+
+		{name: "A=[3] B=[1,9,1] tail=[2,4]",
+			headA: headA3,
+			headB: headB3,
+			want:  tail3,
 		},
 
 		{name: "A=[2,6,4] B=[1,5]",
