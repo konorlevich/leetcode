@@ -1,8 +1,8 @@
-package add_binary
-
-// addBinary
+// Package add_binary
 //
 // Given two binary strings a and b, return their sum as a binary string.
+package add_binary
+
 func addBinary(a string, b string) string {
 	lastA := len(a) - 1
 	lastB := len(b) - 1

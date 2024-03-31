@@ -9,9 +9,6 @@ func Test_addBinary(t *testing.T) {
 		b    string
 		want string
 	}{
-		//by the task description, `1 <= a.length, b.length <= 10^4`,
-		//so we can't test with an empty string
-		//{name: "empty"},
 		{name: "0+0",
 			a:    "0",
 			b:    "0",
