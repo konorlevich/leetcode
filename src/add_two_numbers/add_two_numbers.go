@@ -1,3 +1,10 @@
+// Package add_two_numbers
+//
+// You are given two non-empty linked lists representing two non-negative integers.
+// The digits are stored in reverse order, and each of their nodes contains a single digit.
+// Add the two numbers and return the sum as a linked list.
+//
+// You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 package add_two_numbers
 
 import (
@@ -5,11 +12,6 @@ import (
 )
 
 // addTwoNumbers
-// You are given two non-empty linked lists representing two non-negative integers.
-// The digits are stored in reverse order, and each of their nodes contains a single digit.
-// Add the two numbers and return the sum as a linked list.
-//
-// You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 func addTwoNumbers(l1 *list.Node, l2 *list.Node) *list.Node {
 	if l1 == nil {
 		return l2
