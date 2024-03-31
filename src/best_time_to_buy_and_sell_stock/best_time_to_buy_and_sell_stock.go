@@ -11,26 +11,26 @@ package best_time_to_buy_and_sell_stock
 // bruteForce simples approach O(n^2), too long
 //
 // Iterate over the array on each value, calculate
-func bruteForce(prices []int) int {
-	if len(prices) <= 1 {
-		return 0
-	}
-
-	maxProfit := 0
-	for i, buyPrice := range prices[:len(prices)-1] {
-		for _, sellPrice := range prices[i+1:] {
-			if sellPrice <= buyPrice {
-				continue
-			}
-			profit := sellPrice - buyPrice
-			if profit > maxProfit {
-				maxProfit = profit
-			}
-		}
-	}
-
-	return maxProfit
-}
+//func bruteForce(prices []int) int {
+//	if len(prices) <= 1 {
+//		return 0
+//	}
+//
+//	maxProfit := 0
+//	for i, buyPrice := range prices[:len(prices)-1] {
+//		for _, sellPrice := range prices[i+1:] {
+//			if sellPrice <= buyPrice {
+//				continue
+//			}
+//			profit := sellPrice - buyPrice
+//			if profit > maxProfit {
+//				maxProfit = profit
+//			}
+//		}
+//	}
+//
+//	return maxProfit
+//}
 
 type sellOption struct {
 	buyPrice  int
