@@ -35,7 +35,7 @@ func Test_isValid(t *testing.T) {
 			for s, f := range funcs {
 				t.Run(s, func(t *testing.T) {
 					t.Parallel()
-					if got := isValid(f, tt.s); got != tt.want {
+					if got := f(tt.s); got != tt.want {
 						t.Errorf("%s() = %v, want %v", s, got, tt.want)
 					}
 				})
@@ -54,7 +54,7 @@ func Benchmark_isValid(b *testing.B) {
 			b.Run(name, func(b *testing.B) {
 				b.Run(fmt.Sprintf("%d", i), func(b *testing.B) {
 					for i := 0; i < b.N; i++ {
-						isValid(f, s)
+						f(s)
 					}
 				})
 			})

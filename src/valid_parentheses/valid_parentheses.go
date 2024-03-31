@@ -1,3 +1,14 @@
+// Package valid_parentheses
+//
+// Given a string `s` containing just the characters in brackets, determine if the input string is valid.
+//
+// An input string is valid if:
+//
+// - Open `brackets` must be closed by the same type of `brackets`.
+//
+// - Open `brackets` must be closed in the correct order.
+//
+// - Every close bracket has a corresponding open bracket of the same type.
 package valid_parentheses
 
 var (
@@ -9,19 +20,6 @@ var (
 )
 
 // isValid
-//
-// Given a string `s` containing just the characters in brackets, determine if the input string is valid.
-//
-// An input string is valid if:
-//
-// - Open `brackets` must be closed by the same type of `brackets`.
-//
-// - Open `brackets` must be closed in the correct order.
-//
-// - Every close bracket has a corresponding open bracket of the same type.
-func isValid(f func(s string) bool, s string) bool {
-	return f(s)
-}
 func byOpen(s string) bool {
 	opened := make([]rune, 0, len(s)/2)
 	for _, r := range s {
