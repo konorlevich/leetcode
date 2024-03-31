@@ -23,6 +23,8 @@
 // columnTitle is in the range ["A", "FXSHRXW"].
 package excel_sheet_column_number
 
+import "github.com/konorlevich/leetcode/src/common"
+
 // titleToNumber
 //
 // We use simple ASCII-math.
@@ -45,22 +47,8 @@ func titleToNumber(columnTitle string) int {
 			continue
 		}
 		digitNumber := lastIndex - i
-		number += num * pow(lettersCount, digitNumber)
+		number += num * common.Pow(lettersCount, digitNumber)
 	}
 
 	return number
-}
-
-func pow(x, y int) (powed int) {
-	if x == 1 || y == 0 {
-		return 1
-	}
-	powed = x
-	if y == 1 {
-		return powed
-	}
-	for i := 1; i < y; i++ {
-		powed *= x
-	}
-	return
 }
