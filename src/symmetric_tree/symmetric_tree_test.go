@@ -30,6 +30,23 @@ func Test_isSymmetric(t *testing.T) {
 						Val: 3}},
 			},
 			want: true},
+		{name: "1,1,2,3,4,4,3",
+			root: &common.TreeNode{
+				Val: 1,
+				Left: &common.TreeNode{
+					Val: 1,
+					Left: &common.TreeNode{
+						Val: 3},
+					Right: &common.TreeNode{
+						Val: 4}},
+				Right: &common.TreeNode{
+					Val: 2,
+					Left: &common.TreeNode{
+						Val: 4},
+					Right: &common.TreeNode{
+						Val: 3}},
+			},
+			want: false},
 
 		{name: "1,2,2,null,3,null,3",
 			root: &common.TreeNode{

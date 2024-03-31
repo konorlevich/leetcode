@@ -1,10 +1,10 @@
+// Package symmetric_tree
+//
+// Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 package symmetric_tree
 
 import "github.com/konorlevich/leetcode/src/common"
 
-// isSymmetric
-//
-// Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 func isSymmetric(root *common.TreeNode) bool {
 	if root == nil {
 		return true
