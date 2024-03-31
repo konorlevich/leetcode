@@ -1,5 +1,5 @@
-package remove_element
-
+// Package remove_element
+//
 // Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
 // The order of the elements may be changed.
 // Then return the number of elements in nums which are not equal to val.
@@ -11,6 +11,8 @@ package remove_element
 // The remaining elements of nums are not important as well as the size of nums.
 //
 // - Return k.
+package remove_element
+
 func removeElement(nums []int, val int) int {
 	prevIndex := 0
 	for _, num := range nums {
