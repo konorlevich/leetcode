@@ -43,3 +43,4 @@
 - [171. Excel Sheet Column Number](./src/excel_sheet_column_number/excel_sheet_column_number.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/excel-sheet-column-number)
 - [190. Reverse Bits](./src/reverse_bits/reverse_bits.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/reverse-bits)
 - [191. Number of 1 Bits](./src/number_of_one_bits/number_of_one_bits.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/number-of-1-bits)
+- [202. Happy Number](./src/happy_number/happy_number.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/happy-number)
