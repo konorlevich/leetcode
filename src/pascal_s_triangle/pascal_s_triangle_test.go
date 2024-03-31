@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-var funcs map[string]func(int) [][]int = map[string]func(int) [][]int{
+var funcs = map[string]func(int) [][]int{
 	"brute force": generateBruteForce,
 	//"alternative": generateAlternative,
 }

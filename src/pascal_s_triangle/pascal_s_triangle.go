@@ -1,10 +1,10 @@
-package pascal_s_triangle
-
-// generateBruteForce
+// Package pascal_s_triangle
 //
 // Given an integer numRows, return the first numRows of Pascal's triangle.
 //
 // In Pascal's triangle, each number is the sum of the two numbers directly above
+package pascal_s_triangle
+
 func generateBruteForce(numRows int) (triangle [][]int) {
 	triangle = make([][]int, numRows)
 	for i := 0; i < numRows; i++ {
@@ -51,37 +51,37 @@ func generateBruteForce(numRows int) (triangle [][]int) {
 // i=9  1|9|36|84|126|126|84|36|9|   1|i|   i*i/2       |...
 //
 // And it seems like there's a way to find a universal formula for all the values
-func generateAlternative(numRows int) (triangle [][]int) {
-	triangle = make([][]int, numRows)
-	for i := 0; i < numRows; i++ {
-		lenI := i + 1
-		triangle[i] = make([]int, lenI)
-		for ii := 0; ii < lenI/2+lenI%2; ii++ {
-			if i == 0 {
-				triangle[i][ii] = 1
-				continue
-			}
-			if ii == 0 {
-				triangle[i][ii], triangle[i][i-ii] = 1, 1
-				//triangle[i][0], triangle[i][1] = 1, 1
-				continue
-			}
-			if ii == 1 {
-				triangle[i][ii], triangle[i][i-ii] = i, i
-				continue
-			}
-			if ii == 2 {
-				var k int
-				if i%2 == 1 {
-					k = i * (i / 2)
-				} else {
-					k = i*((i+1)/3) + i/2
-				}
-				triangle[i][ii], triangle[i][i-ii] = k, k
-				continue
-			}
-			//TODO: finalize it
-		}
-	}
-	return
-}
+//func generateAlternative(numRows int) (triangle [][]int) {
+//	triangle = make([][]int, numRows)
+//	for i := 0; i < numRows; i++ {
+//		lenI := i + 1
+//		triangle[i] = make([]int, lenI)
+//		for ii := 0; ii < lenI/2+lenI%2; ii++ {
+//			if i == 0 {
+//				triangle[i][ii] = 1
+//				continue
+//			}
+//			if ii == 0 {
+//				triangle[i][ii], triangle[i][i-ii] = 1, 1
+//				//triangle[i][0], triangle[i][1] = 1, 1
+//				continue
+//			}
+//			if ii == 1 {
+//				triangle[i][ii], triangle[i][i-ii] = i, i
+//				continue
+//			}
+//			if ii == 2 {
+//				var k int
+//				if i%2 == 1 {
+//					k = i * (i / 2)
+//				} else {
+//					k = i*((i+1)/3) + i/2
+//				}
+//				triangle[i][ii], triangle[i][i-ii] = k, k
+//				continue
+//			}
+//			//TODO: finalize it
+//		}
+//	}
+//	return
+//}
