@@ -46,3 +46,4 @@
 - [202. Happy Number](./src/happy_number/happy_number.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/happy-number)
 - [206. Reverse Linked List](./src/reverse_linked_list/reverse_linked_list.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/reverse-linked-list)
 - [217. Contains Duplicate](./src/contains_duplicate/contains_duplicate.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/contains-duplicate)
+- [234. Palindrome Linked List](./src/palindrome_linked_list/palindrome_linked_list.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/palindrome-linked-list)
