@@ -1,13 +1,13 @@
-package binary_tree_inorder_traversal
-
-import "github.com/konorlevich/leetcode/src/common"
-
-// inorderTraversal
+// Package binary_tree_inorder_traversal
 //
 // Given the root of a binary tree, return the inorder traversal of its nodes' values.
 //
 // In in-order, we always recursively traverse the current node's left subtree;
 // next, we visit the current node, and lastly, we recursively traverse the current node's right subtree.
+package binary_tree_inorder_traversal
+
+import "github.com/konorlevich/leetcode/src/common"
+
 func recursive(root *common.TreeNode) (res []int) {
 	if root == nil {
 		return nil
@@ -25,12 +25,6 @@ func recursive(root *common.TreeNode) (res []int) {
 	return res
 }
 
-// iterative
-//
-// Given the root of a binary tree, return the inorder traversal of its nodes' values.
-//
-// In in-order, we always recursively traverse the current node's left subtree;
-// next, we visit the current node, and lastly, we recursively traverse the current node's right subtree.
 func iterative(root *common.TreeNode) (res []int) {
 	var stack []*common.TreeNode
 	node := root
