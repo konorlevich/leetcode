@@ -1,13 +1,13 @@
+// Package balanced_binary_tree
+//
+// Given a binary tree, determine if it is height-balanced
+//
+// A height-balanced binary tree
+// is a binary tree in which the depth of the two subtrees of every node never differs by more than one.
 package balanced_binary_tree
 
 import "github.com/konorlevich/leetcode/src/common"
 
-// isBalanced
-//
-// # Given a binary tree, determine if it is height-balanced
-//
-// A height-balanced binary tree
-// is a binary tree in which the depth of the two subtrees of every node never differs by more than one.
 func isBalanced(root *common.TreeNode) bool {
 	if root == nil {
 		return true
