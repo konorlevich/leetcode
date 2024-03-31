@@ -19,6 +19,11 @@ func Test_isSameTree(t *testing.T) {
 			q:    &common.TreeNode{Val: 1, Left: &common.TreeNode{Val: 2}, Right: &common.TreeNode{Val: 3}},
 			want: true,
 		},
+		{name: "p = [1,2,3], q = [1,2]",
+			p:    &common.TreeNode{Val: 1, Left: &common.TreeNode{Val: 2}, Right: &common.TreeNode{Val: 3}},
+			q:    &common.TreeNode{Val: 1, Left: &common.TreeNode{Val: 2}},
+			want: false,
+		},
 
 		{name: "p = [1,2], q = [1,null,2]",
 			p:    &common.TreeNode{Val: 1, Left: &common.TreeNode{Val: 2}},
@@ -29,6 +34,12 @@ func Test_isSameTree(t *testing.T) {
 		{name: "p = [1,2,1], q = [1,1,2]",
 			p:    &common.TreeNode{Val: 1, Left: &common.TreeNode{Val: 2}, Right: &common.TreeNode{Val: 1}},
 			q:    &common.TreeNode{Val: 1, Left: &common.TreeNode{Val: 1}, Right: &common.TreeNode{Val: 2}},
+			want: false,
+		},
+
+		{name: "p = [1,2,1], q = nil",
+			p:    &common.TreeNode{Val: 1, Left: &common.TreeNode{Val: 2}, Right: &common.TreeNode{Val: 1}},
+			q:    nil,
 			want: false,
 		},
 	}
