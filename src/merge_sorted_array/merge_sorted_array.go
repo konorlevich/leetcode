@@ -1,6 +1,4 @@
-package merge_sorted_array
-
-// merge
+// Package merge_sorted_array
 //
 // You are given two integer arrays nums1 and nums2, sorted in non-decreasing order,
 // and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
@@ -12,6 +10,8 @@ package merge_sorted_array
 // where the first m elements denote the elements that should be merged,
 // and the last n elements are set to 0 and should be ignored.
 // nums2 has a length of n.
+package merge_sorted_array
+
 func merge(nums1 []int, m int, nums2 []int, n int) {
 	for indexInNums2, numInNums2 := range nums2 {
 		if m == 0 {
