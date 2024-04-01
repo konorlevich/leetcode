@@ -12,6 +12,15 @@ func Test_pow(t *testing.T) {
 		wantPowed int
 	}{
 		{name: "empty", wantPowed: 1},
+		{name: "0^2",
+			y:         2,
+			wantPowed: 0,
+		},
+		{name: "2^1",
+			x:         2,
+			y:         1,
+			wantPowed: 2,
+		},
 		{name: "1^10",
 			x:         1,
 			y:         10,
