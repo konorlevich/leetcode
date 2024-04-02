@@ -9,6 +9,7 @@
   - [php](./src/TwoSum/Solution.php) 
 - [2. Add Two Numbers ![medium](https://img.shields.io/badge/-medium-yellow?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/add-two-numbers)  
   - [go](./src/add_two_numbers/add_two_numbers.go) 
+  - [php](./src/AddTwoNumbers/Solution.php) 
 - [3. Longest Substring Without Repeating Characters ![medium](https://img.shields.io/badge/-medium-yellow?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/longest-substring-without-repeating-characters)  
   - [go](./src/longest_substring_without_repeating_characters/longest_substring_without_repeating_characters.go) 
 - [4. Median of Two Sorted Arrays ![medium](https://img.shields.io/badge/-hard-red?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/median-of-two-sorted-arrays)  
