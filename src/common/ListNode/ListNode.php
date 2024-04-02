@@ -22,7 +22,7 @@ class ListNode
     public static function fromList(array $list): ?ListNode
     {
         $node = null;
-        for ($i = count($list)-1; $i >= 0 ; $i--) {
+        for ($i = 0; $i < count($list) ; $i++) {
             $node = new ListNode($list[$i], $node);
         }
         return $node;

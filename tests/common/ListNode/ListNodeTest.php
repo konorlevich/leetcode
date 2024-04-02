@@ -20,18 +20,18 @@ use PHPUnit\Framework\TestCase;
             ],
             '[1,2,3,4]' => [
                 'list'=> [1,2,3,4],
-                'expected'=> new ListNode(1,
-                    new ListNode(2,
-                    new ListNode(3,
-                    new ListNode(4)
-                    ))),
-            ],
-            '[4,3,2,1]' => [
-                'list'=> [4,3,2,1],
                 'expected'=> new ListNode(4,
                     new ListNode(3,
                     new ListNode(2,
                     new ListNode(1)
+                    ))),
+            ],
+            '[4,3,2,1]' => [
+                'list'=> [4,3,2,1],
+                'expected'=> new ListNode(1,
+                    new ListNode(2,
+                    new ListNode(3,
+                    new ListNode(4)
                     ))),
             ],
         ];
