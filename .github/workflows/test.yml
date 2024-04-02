@@ -17,7 +17,20 @@ jobs:
           go-version: '1.22'
 
       - name: Test
-        run: go test  -json -race ./... -covermode=atomic -coverprofile ../coverage_go.out
+        run: go test  -json -race ./... -covermode=atomic -coverprofile coverage_go.out
+
+      - name: Install composer and dependencies
+        uses: php-actions/composer@v6
+
+      - name: PHPUnit Tests
+        uses: php-actions/phpunit@v3
+        env:
+          XDEBUG_MODE: coverage
+        with:
+          bootstrap: vendor/autoload.php
+          configuration: phpunit.xml
+          php_extensions: xdebug
+          args: tests --coverage-clover ./coverage.xml
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
