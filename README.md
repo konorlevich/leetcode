@@ -49,3 +49,4 @@
 - [234. Palindrome Linked List](./src/palindrome_linked_list/palindrome_linked_list.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/palindrome-linked-list)
 - [242. Valid Anagram](./src/valid_anagram/valid_anagram.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/valid-anagram)
 - [268. Missing Number](./src/missing_number/missing_number.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/missing-number)
+- [283. Move Zeroes](./src/move_zeroes/move_zeroes.go) [![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/move-zeroes)
