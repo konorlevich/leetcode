@@ -1,1 +1,5 @@
 .idea
+.phpunit.cache
+vendor
+composer.phar
+test.sh
