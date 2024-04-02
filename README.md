@@ -6,6 +6,7 @@
 
 - [1. Two sum ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/two-sum)  
   - [go](./src/two_sum/two_sum.go) 
+  - [php](./src/TwoSum/Solution.php) 
 - [2. Add Two Numbers ![medium](https://img.shields.io/badge/-medium-yellow?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/add-two-numbers)  
   - [go](./src/add_two_numbers/add_two_numbers.go) 
 - [3. Longest Substring Without Repeating Characters ![medium](https://img.shields.io/badge/-medium-yellow?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/longest-substring-without-repeating-characters)  
