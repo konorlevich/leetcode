@@ -7,15 +7,13 @@ namespace Konorlevich\Leetcode\AddTwoNumbers;
 use Konorlevich\Leetcode\common\ListNode\ListNode;
 
 /**
- * Definition for a singly-linked list.
- * class ListNode {
- *     public $val = 0;
- *     public $next = null;
- *     function __construct($val = 0, $next = null) {
- *         $this->val = $val;
- *         $this->next = $next;
- *     }
- * }
+ * You are given two non-empty linked lists representing two non-negative integers.
+ * The digits are stored in reverse order, and each of their nodes contains a single digit.
+ * Add the two numbers and return the sum as a linked list.
+ *
+ * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+ *
+ * It is guaranteed that the list represents a number that does not have leading zeros.
  */
 class Solution
 {
@@ -34,7 +32,7 @@ class Solution
             return $l1;
         }
         $l3 = new ListNode($l1->val + $l2->val);
-        if ($l3->val > 10) {
+        if ($l3->val >= 10) {
             $l3->next = new ListNode(1);
             $l3->val -= 10;
         }
