@@ -88,6 +88,7 @@
   - [go](./src/happy_number/happy_number.go)
 - [205. Isomorphic Strings ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/isomorphic-strings)
   - [php](./src/IsomorphicStrings/Solution.php) 
+  - [go](./src/isomorphic_strings/isomorphic_strings.go) 
 - [206. Reverse Linked List ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/reverse-linked-list)  
   - [go](./src/reverse_linked_list/reverse_linked_list.go) 
 - [217. Contains Duplicate ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/contains-duplicate)  
