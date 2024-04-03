@@ -17,7 +17,7 @@ jobs:
           go-version: '1.22'
 
       - name: Test
-        run: go test  -json -race ./... -covermode=atomic -coverprofile coverage_go.out
+        run: go test -mod=mod -json -race ./... -covermode=atomic -coverprofile coverage_go.out
 
       - name: Install composer and dependencies
         uses: php-actions/composer@v6
