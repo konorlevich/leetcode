@@ -14,6 +14,8 @@
   - [go](./src/longest_substring_without_repeating_characters/longest_substring_without_repeating_characters.go) 
 - [4. Median of Two Sorted Arrays ![medium](https://img.shields.io/badge/-hard-red?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/median-of-two-sorted-arrays)  
   - [go](./src/median_of_two_sorted_arrays/median_of_two_sorted_arrays.go) 
+- [5. Longest Palindromic Substring ![medium](https://img.shields.io/badge/-hard-red?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/longest-palindromic-substring)  
+  - [go](./src/longest_palindromic_substring/longest_palindromic_substring.go) 
 - [9. Palindrome number ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/palindrome-number)  
   - [go](./src/palindrome/palindrome.go) 
 - [13. Roman to integer ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/roman-to-integer)  
