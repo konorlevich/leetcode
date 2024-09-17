@@ -1,4 +1,4 @@
-name: test_task_s3
+name: leetcode
 
 on:
   push:
