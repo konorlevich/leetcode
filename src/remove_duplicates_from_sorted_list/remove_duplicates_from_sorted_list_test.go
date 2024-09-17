@@ -1,9 +1,11 @@
 package remove_duplicates_from_sorted_list
 
 import (
-	"github.com/google/go-cmp/cmp"
-	"github.com/konorlevich/leetcode/src/common/list"
 	"testing"
+
+	"github.com/google/go-cmp/cmp"
+
+	"github.com/konorlevich/leetcode/src/common/list"
 )
 
 var funcs = map[string]func(head *list.Node) *list.Node{
@@ -32,7 +34,6 @@ func Test_deleteDuplicates(t *testing.T) {
 			t.Parallel()
 			for s, f := range funcs {
 				t.Run(s, func(t *testing.T) {
-					t.Parallel()
 					if diff := cmp.Diff(tt.want, f(tt.head)); diff != "" {
 						t.Errorf("%s()\n%s", s, diff)
 					}
