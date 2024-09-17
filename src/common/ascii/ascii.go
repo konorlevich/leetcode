@@ -4,6 +4,7 @@ const (
 	Space          = 32
 	Plus           = 43
 	Minus          = 45
+	Period         = 46
 	Digit0         = 48
 	Digit9         = 57
 	LetterACapital = 65

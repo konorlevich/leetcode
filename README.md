@@ -18,6 +18,8 @@
   - [go](./src/longest_palindromic_substring/longest_palindromic_substring.go) 
 - [7. Reverse Integer ![medium](https://img.shields.io/badge/-medium-yellow?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/reverse-integer)  
   - [go](./src/reverse_integer/reverse_integer.go) 
+- [8. String to Integer (atoi) ![medium](https://img.shields.io/badge/-medium-yellow?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/string-to-integer-atoi)  
+  - [go](./src/string_to_integer_atoi/string_to_integer_atoi.go) 
 - [9. Palindrome number ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/palindrome-number)  
   - [go](./src/palindrome/palindrome.go) 
 - [13. Roman to integer ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/roman-to-integer)  
