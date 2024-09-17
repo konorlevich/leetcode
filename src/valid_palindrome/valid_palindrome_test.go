@@ -1,6 +1,10 @@
 package valid_palindrome
 
-import "testing"
+import (
+	"testing"
+
+	"github.com/konorlevich/leetcode/src/common/ascii"
+)
 
 func Test_isPalindrome(t *testing.T) {
 	tests := []struct {
@@ -191,8 +195,8 @@ func Test_areSimilar(t *testing.T) {
 	}{
 		{name: "empty", want: true},
 		{name: "o != p", s1: uint8(111), s2: uint8(112), want: false},
-		{name: "a == a", s1: asciiLetterA, s2: asciiLetterA, want: true},
-		{name: "a == A", s1: asciiLetterA, s2: asciiLetterACapital, want: true},
+		{name: "a == a", s1: ascii.LetterA, s2: ascii.LetterA, want: true},
+		{name: "a == A", s1: ascii.LetterA, s2: ascii.LetterACapital, want: true},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

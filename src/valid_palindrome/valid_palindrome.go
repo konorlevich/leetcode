@@ -9,15 +9,10 @@
 // s consists only of printable ASCII characters.
 package valid_palindrome
 
-const (
-	ascii0              = uint8(48)
-	ascii9              = uint8(57)
-	asciiLetterACapital = uint8(65)
-	asciiLetterZCapital = uint8(90)
-	asciiLetterA        = uint8(97)
-	asciiLetterZ        = uint8(122)
+import "github.com/konorlevich/leetcode/src/common/ascii"
 
-	distance = asciiLetterA - asciiLetterACapital
+const (
+	distance = ascii.LetterA - ascii.LetterACapital
 )
 
 // isPalindrome
@@ -55,10 +50,10 @@ func areSimilar(s1, s2 uint8) bool {
 	if s1 == s2 {
 		return true
 	}
-	if s1 > asciiLetterZCapital {
+	if s1 > ascii.LetterZCapital {
 		s1 -= distance
 	}
-	if s2 > asciiLetterZCapital {
+	if s2 > ascii.LetterZCapital {
 		s2 -= distance
 	}
 	if s1 != s2 {
@@ -69,16 +64,16 @@ func areSimilar(s1, s2 uint8) bool {
 
 // isAlphanumeric checks if ASCII-symbol is 0-9 or a-z or A-Z
 func isAlphanumeric(s uint8) bool {
-	if s < ascii0 {
+	if s < ascii.Digit0 {
 		return false
 	}
-	if s > ascii9 && s < asciiLetterACapital {
+	if s > ascii.Digit9 && s < ascii.LetterACapital {
 		return false
 	}
-	if s > asciiLetterZCapital && s < asciiLetterA {
+	if s > ascii.LetterZCapital && s < ascii.LetterA {
 		return false
 	}
-	if s > asciiLetterZ {
+	if s > ascii.LetterZ {
 		return false
 	}
 	return true

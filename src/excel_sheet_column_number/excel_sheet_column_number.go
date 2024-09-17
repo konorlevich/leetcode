@@ -23,7 +23,9 @@
 // columnTitle is in the range ["A", "FXSHRXW"].
 package excel_sheet_column_number
 
-import "github.com/konorlevich/leetcode/src/common"
+import (
+	"github.com/konorlevich/leetcode/src/common"
+)
 
 // titleToNumber
 //
@@ -41,7 +43,7 @@ func titleToNumber(columnTitle string) int {
 	lastIndex := len(columnTitle) - 1
 	for i := lastIndex; i >= 0; i-- {
 		symbol := columnTitle[i]
-		num := int(symbol) - 64 // ASCII A = 65, in our task A = 1
+		num := int(symbol - 64) // ASCII A = 65, in our task A = 1
 		if i == lastIndex {     // it is unnecessary, but it makes the func a bit faster
 			number += num
 			continue
