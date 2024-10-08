@@ -22,6 +22,8 @@
   - [go](./src/string_to_integer_atoi/string_to_integer_atoi.go) 
 - [9. Palindrome number ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/palindrome-number)  
   - [go](./src/palindrome/palindrome.go) 
+- [10. Regular Expression Matching ![hard](https://img.shields.io/badge/-hard-red?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/regular-expression-matching)  
+  - [go](./src/regular_expression_matching/regular_expression_matching.go) 
 - [13. Roman to integer ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/roman-to-integer)  
   - [go](./src/roman_to_integer/roman_to_integer.go) 
 - [14. Longest common prefix ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/longest-common-prefix)  
