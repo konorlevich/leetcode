@@ -123,5 +123,7 @@
   - [php](./src/IntersectionOfTwoArraysII/Solution.php)
 - [485. Max Consecutive Ones ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/max-consecutive-ones)  
   - [go](./src/max_consecutive_ones/max_consecutive_ones.go)
+- [977. Squares of a Sorted Array ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/squares-of-a-sorted-array)
+  - [go](./src/squares_of_a_sorted_array/squares_of_a_sorted_array.go)
 - [1295. Find Numbers with Even Number of Digits ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/find-numbers-with-even-number-of-digits)  
   - [go](./src/find_numbers_with_even_number_of_digits/find_numbers_with_even_number_of_digits.go)
