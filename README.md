@@ -121,3 +121,5 @@
   - [go](./src/reverse_string/reverse_string.go) 
 - [350. Intersection of Two Arrays II ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/intersection-of-two-arrays-ii)  
   - [php](./src/IntersectionOfTwoArraysII/Solution.php)
+- [485. Max Consecutive Ones ![easy](https://img.shields.io/badge/-easy-green?style=flat&logo=leetcode&labelColor=black)](https://leetcode.com/problems/max-consecutive-ones)  
+  - [go](./src/max_consecutive_ones/max_consecutive_ones.go)
